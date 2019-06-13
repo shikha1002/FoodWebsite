@@ -1,0 +1,11 @@
+<!-- <app-header (featureSelected)="displayFeatures($event)"></app-header> -->
+<app-header></app-header>
+<div class="container">
+  <div class="row"> 
+    <div class="col-md-12">        
+      <!-- <app-recipes *ngIf="featureLoaded==='Recipe'"></app-recipes> 
+      <app-shopping-list *ngIf="featureLoaded==='shopinglist'"></app-shopping-list> -->
+      <router-outlet></router-outlet> 
+    </div>
+  </div>
+</div>

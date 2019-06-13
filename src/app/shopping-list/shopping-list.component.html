@@ -1,0 +1,17 @@
+<div class="row">
+  <div class="col-md-10">
+    <!-- <app-shopping-edit (IngredientDetails)="addIngredients($event)"></app-shopping-edit> -->
+    <app-shopping-edit></app-shopping-edit>
+    <hr>
+    <ul class="list-group">
+      <a class="list-group-item" style="cursor:pointer" *ngFor="let ingrident of (shoppingListState| async).ingridents;let i=index"
+      (click)="OnEditingIngredent(i)"> 
+      {{ingrident.name}}({{ingrident.amount}})
+      </a>
+    </ul>
+    <br><br>
+    <button (click)="onSaveShoppingList()" class="btn btn-primary">Save Data</button>&nbsp;
+    <button (click)="onfetchShoppingList()" class="btn btn-primary" 
+    style="background-color:rgb(99, 65, 3); border: 1px solid rgb(99, 65, 3);">Fetch Data</button>
+  </div>
+</div>

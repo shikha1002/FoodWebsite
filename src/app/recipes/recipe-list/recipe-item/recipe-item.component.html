@@ -1,0 +1,22 @@
+<!-- <a href="#" class="list-group-item clearfix" *ngFor="let d of recipes">
+    <div class="pull-left">
+        <h4 class="list-group-item-heading">{{d.name}}</h4>
+        <p class="list-group-item-text">{{d.description}}</p>
+    </div> 
+    <span class="pull-right">
+        
+        <img [src]="d.imagePath" alt="" class="img-responsive" style="max-height:50px;">
+    </span> 
+</a> -->
+
+<!-- <a style="cursor:pointer" class="list-group-item clearfix" (click)="getSelected()"> -->
+<a style="cursor:pointer" class="list-group-item clearfix" [routerLink]="index" routerLinkActive="active">
+    <div class="pull-left"> 
+        <h4 class="list-group-item-heading">{{element.name}}</h4>
+        <p class="list-group-item-text">{{element.description}}</p>
+    </div> 
+    <span class="pull-right">
+        <!-- <img src="{{d.imagePath}}" alt="" class="img-responsive" style="max-height:50px;"> -->
+        <img [src]="element.imagePath" alt="" class="img-responsive" style="max-height:50px;">
+    </span> 
+</a> 
